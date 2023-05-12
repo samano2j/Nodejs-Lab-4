@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs', { pageTitle }) %>
+
+<h1>List of Members</h1>
+<a href="http://localhost:8000/api/members/newMember">Add a New Member</a>
+<% if(members.length === 0){ %>
+    <p>No Members</p>
+<% }else{ %>
+    <ul>
+        <% members.forEach(function(member){ %>
+            <li>
+                <h2><a href="http://localhost:8000/api/members/singleMember?id=<%= member.id %>"><%= member.name %></a></h2>
+            </li>
+        <% }) %>
+    </ul>
+<% } %>
+<%- include('partials/footer.ejs') %>

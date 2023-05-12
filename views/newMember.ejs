@@ -1,0 +1,15 @@
+<%- include('partials/header.ejs', { pageTitle }) %>
+
+<form method="POST">
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" placeholder="Enter name"/>
+    </div>
+    <div>
+        <label for="email">Email: </label>
+        <input type="text" name="email" placeholder="Enter email"/>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+<%- include('partials/footer.ejs') %>
